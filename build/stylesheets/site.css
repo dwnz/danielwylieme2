@@ -54,7 +54,6 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 a {
-  background: black;
   color: white; }
 
 .panel {
@@ -121,7 +120,6 @@ h2 {
   text-align: center;
   width: 100%; }
   .buttons a {
-    background: black;
     color: white;
     display: block;
     border: 4px solid white;
@@ -143,7 +141,7 @@ h2 {
           margin-right: 0; } }
     .buttons a:hover {
       background: white;
-      color: black; }
+      color: #000815; }
     .buttons a:active {
       background: #d5d5d5;
       color: black;
