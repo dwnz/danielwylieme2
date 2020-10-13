@@ -45,6 +45,56 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.presets {
+  background: #000815;
+  color: white; }
+  .presets .container {
+    max-width: 850px;
+    margin: 40px auto; }
+    .presets .container h1, .presets .container h2 {
+      text-align: left;
+      padding: 20px 0; }
+    .presets .container h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+      .presets .container h3:first-of-type {
+        margin-top: 40px; }
+    .presets .container p {
+      line-height: 200%; }
+    .presets .container .sample {
+      margin: 20px 0;
+      background: #000d23; }
+  .presets .btn {
+    color: white;
+    display: block;
+    border: 4px solid white;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+    opacity: 1;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 22px; }
+    @media (min-width: 768px) {
+      .presets .btn {
+        display: inline-block;
+        margin-left: 0;
+        margin-bottom: 0; }
+        .presets .btn:last-of-type {
+          margin-right: 0; } }
+    .presets .btn:hover {
+      background: white;
+      color: #000815; }
+    .presets .btn:active {
+      background: #d5d5d5;
+      color: black;
+      border-color: #d5d5d5;
+      transform: scale(0.96); }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

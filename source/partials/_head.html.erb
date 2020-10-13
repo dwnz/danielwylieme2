@@ -17,5 +17,14 @@
 
 <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114049804-3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-114049804-3');
+</script>
+
+<link href="/img/favicon.png" rel="icon" type="image/png" />
 <title>Daniel Wylie</title>
