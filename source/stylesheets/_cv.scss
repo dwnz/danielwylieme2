@@ -1,0 +1,198 @@
+.cv {
+  $break: 900px;
+  $spacing: 24px;
+  $spacing--smaller: $spacing / 2;
+
+  h1, h2, h3 {
+    text-align: left;
+    padding: ($spacing * 2) 0 $spacing;
+  }
+
+  h2, h3 {
+    padding-top: 0;
+  }
+
+  header {
+    .header__primary {
+      @media(min-width: $break) {
+        float: left;
+        width: 80%;
+      }
+    }
+
+    .header__sub {
+      @media(min-width: $break) {
+        float: left;
+        width: 20%;
+        text-align: right;
+      }
+
+      padding: ($spacing * 2) 0 $spacing;
+
+      ul {
+        li {
+          display: inline-block;
+        }
+      }
+
+      a {
+        color: #2a2829;
+      }
+    }
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+  }
+
+  .content {
+    max-width: 900px;
+    margin: $spacing;
+
+    @media(min-width: $break) {
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: $spacing;
+      text-align: justify;
+    }
+  }
+
+  .experience {
+    padding: $spacing 0;
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: $spacing--smaller;
+    }
+
+    h5 {
+      font-size: 18px;
+      margin-bottom: $spacing--smaller;
+    }
+
+    .experience__content {
+      .intro {
+        @media(min-width: $break) {
+          width: 60%;
+          float: left;
+        }
+      }
+
+      .tech {
+        @media(min-width: $break) {
+          width: 40%;
+          float: left;
+          padding-left: $spacing;
+        }
+
+        ul {
+          li {
+            display: inline-block;
+            padding: $spacing--smaller;
+            background: white;
+            color: #3098FF;
+            margin-bottom: $spacing--smaller;
+            margin-right: $spacing--smaller / 2;
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    &.experience--hunchbuzz {
+      $blockcolour: #3098FF;
+
+      .tech ul li {
+        color: $blockcolour;
+        border: 1px solid $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+
+    &.experience--overlandnz {
+      $blockcolour: #2a2829;
+
+      .tech ul li {
+        border: 1px solid $blockcolour;
+        color: $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+
+    &.experience--shnappy {
+      $blockcolour: #ea2378;
+
+      .tech ul li {
+        border: 1px solid $blockcolour;
+        color: $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+
+    &.experience--raygun {
+      $blockcolour: #1072bf;
+
+      .tech ul li {
+        border: 1px solid $blockcolour;
+        color: $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+
+    &.experience--nv {
+      $blockcolour: #000000;
+
+      .tech ul li {
+        color: $blockcolour;
+        border: 1px solid $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+
+    &.experience--xero {
+      $blockcolour: rgb(0, 120, 200);
+
+      .tech ul li {
+        color: $blockcolour;
+        border: 1px solid $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+      }
+    }
+  }
+}
