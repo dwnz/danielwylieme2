@@ -21,15 +21,21 @@
     }
 
     .header__sub {
+      margin-bottom: $spacing;
+
       @media(min-width: $break) {
         float: left;
         width: 20%;
         text-align: right;
+        padding: ($spacing * 2) 0 $spacing;
+        margin-bottom: auto;
       }
 
-      padding: ($spacing * 2) 0 $spacing;
-
       ul {
+        @media print {
+          display: none;
+        }
+
         li {
           display: inline-block;
         }
@@ -64,17 +70,33 @@
   }
 
   .experience {
-    padding: $spacing 0;
+    padding: $spacing--smaller 0;
+
+    @media(min-width: $break) {
+      padding: $spacing 0;
+    }
 
     h4 {
       text-transform: uppercase;
       font-size: 24px;
       margin-bottom: $spacing--smaller;
+
+      @media print {
+        text-transform: none;
+      }
     }
 
     h5 {
-      font-size: 18px;
+      font-size: 14px;
       margin-bottom: $spacing--smaller;
+
+      @media(min-width: $break) {
+        font-size: 18px;
+      }
+
+      &.role {
+        color: #6c6c6c;
+      }
     }
 
     .experience__content {
@@ -100,6 +122,11 @@
             color: #3098FF;
             margin-bottom: $spacing--smaller;
             margin-right: $spacing--smaller / 2;
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
       }
@@ -122,6 +149,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
 
@@ -136,6 +168,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
 
@@ -150,6 +187,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
 
@@ -164,6 +206,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
 
@@ -178,6 +225,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
 
@@ -192,6 +244,11 @@
       .btn {
         border-color: $blockcolour;
         color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
       }
     }
   }
