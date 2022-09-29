@@ -12,6 +12,14 @@
     padding-top: 0;
   }
 
+  .print__only {
+    display: none;
+
+    @media print {
+      display: inline;
+    }
+  }
+
   header {
     .header__primary {
       @media(min-width: $break) {
@@ -74,6 +82,10 @@
 
     @media(min-width: $break) {
       padding: $spacing 0;
+    }
+
+    @media print {
+      padding: 0;
     }
 
     h4 {
