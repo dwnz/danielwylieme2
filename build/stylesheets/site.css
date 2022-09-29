@@ -55,11 +55,13 @@ table {
   opacity: 1;
   text-transform: uppercase;
   font-weight: 200;
-  margin-right: 12px;
-  margin-left: 12px;
   margin-bottom: 22px; }
+  @media print {
+    .btn {
+      display: none; } }
   @media (min-width: 768px) {
     .btn {
+      margin-right: 12px;
       display: inline-block;
       margin-left: 0;
       margin-bottom: 0; }
@@ -131,18 +133,29 @@ table {
 .cv h2, .cv h3 {
   padding-top: 0; }
 
+.cv .print__only {
+  display: none; }
+  @media print {
+    .cv .print__only {
+      display: inline; } }
+
 @media (min-width: 900px) {
   .cv header .header__primary {
     float: left;
     width: 80%; } }
 
 .cv header .header__sub {
-  padding: 48px 0 24px; }
+  margin-bottom: 24px; }
   @media (min-width: 900px) {
     .cv header .header__sub {
       float: left;
       width: 20%;
-      text-align: right; } }
+      text-align: right;
+      padding: 48px 0 24px;
+      margin-bottom: auto; } }
+  @media print {
+    .cv header .header__sub ul {
+      display: none; } }
   .cv header .header__sub ul li {
     display: inline-block; }
   .cv header .header__sub a {
@@ -166,14 +179,28 @@ table {
     text-align: justify; }
 
 .cv .experience {
-  padding: 24px 0; }
+  padding: 12px 0; }
+  @media (min-width: 900px) {
+    .cv .experience {
+      padding: 24px 0; } }
+  @media print {
+    .cv .experience {
+      padding: 0; } }
   .cv .experience h4 {
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 12px; }
+    @media print {
+      .cv .experience h4 {
+        text-transform: none; } }
   .cv .experience h5 {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 12px; }
+    @media (min-width: 900px) {
+      .cv .experience h5 {
+        font-size: 18px; } }
+    .cv .experience h5.role {
+      color: #6c6c6c; }
   @media (min-width: 900px) {
     .cv .experience .experience__content .intro {
       width: 60%;
@@ -189,7 +216,10 @@ table {
     background: white;
     color: #3098FF;
     margin-bottom: 12px;
-    margin-right: 6px; }
+    margin-right: 6px;
+    transition: all 100ms ease-in-out; }
+    .cv .experience .experience__content .tech ul li:hover {
+      transform: scale(1.1); }
   .cv .experience .experience__content:after {
     content: '';
     display: block;
@@ -200,36 +230,62 @@ table {
   .cv .experience.experience--hunchbuzz .btn {
     border-color: #3098FF;
     color: #3098FF; }
+    .cv .experience.experience--hunchbuzz .btn:hover {
+      background: #3098FF;
+      color: white; }
   .cv .experience.experience--overlandnz .tech ul li {
     border: 1px solid #2a2829;
     color: #2a2829; }
+    @media (prefers-color-scheme: dark) {
+      .cv .experience.experience--overlandnz .tech ul li {
+        color: #000d23;
+        border-color: white; } }
   .cv .experience.experience--overlandnz .btn {
     border-color: #2a2829;
     color: #2a2829; }
+    .cv .experience.experience--overlandnz .btn:hover {
+      background: #2a2829;
+      color: white; }
+    @media (prefers-color-scheme: dark) {
+      .cv .experience.experience--overlandnz .btn {
+        color: white;
+        border-color: white; } }
   .cv .experience.experience--shnappy .tech ul li {
     border: 1px solid #ea2378;
     color: #ea2378; }
   .cv .experience.experience--shnappy .btn {
     border-color: #ea2378;
     color: #ea2378; }
+    .cv .experience.experience--shnappy .btn:hover {
+      background: #ea2378;
+      color: white; }
   .cv .experience.experience--raygun .tech ul li {
     border: 1px solid #1072bf;
     color: #1072bf; }
   .cv .experience.experience--raygun .btn {
     border-color: #1072bf;
     color: #1072bf; }
+    .cv .experience.experience--raygun .btn:hover {
+      background: #1072bf;
+      color: white; }
   .cv .experience.experience--nv .tech ul li {
     color: #000000;
     border: 1px solid #000000; }
   .cv .experience.experience--nv .btn {
     border-color: #000000;
     color: #000000; }
+    .cv .experience.experience--nv .btn:hover {
+      background: #000000;
+      color: white; }
   .cv .experience.experience--xero .tech ul li {
     color: #0078c8;
     border: 1px solid #0078c8; }
   .cv .experience.experience--xero .btn {
     border-color: #0078c8;
     color: #0078c8; }
+    .cv .experience.experience--xero .btn:hover {
+      background: #0078c8;
+      color: white; }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -238,6 +294,10 @@ table {
 
 body {
   font-family: 'Roboto', sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #000d23;
+      color: #d5d5d5; } }
 
 a {
   color: white; }
