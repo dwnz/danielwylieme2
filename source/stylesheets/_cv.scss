@@ -150,6 +150,25 @@
       }
     }
 
+    &.experience--spotlight {
+      $blockcolour: #04255b;
+
+      .tech ul li {
+        color: $blockcolour;
+        border: 1px solid $blockcolour;
+      }
+
+      .btn {
+        border-color: $blockcolour;
+        color: $blockcolour;
+
+        &:hover {
+          background: $blockcolour;
+          color: white;
+        }
+      }
+    }
+
     &.experience--hunchbuzz {
       $blockcolour: #3098FF;
 
